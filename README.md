@@ -5,6 +5,8 @@
 
 > In this project, I build a Telegram bot that gives a bit of information about me and gives random quotes.
 
+![Screenshot](images/screnn.png)
+
 ## Built With
 
 - Ruby
@@ -33,6 +35,8 @@
 - 'Quote' will prompt the bot to give a random inspirational quote.
 
 - Of course, you can alter the messages and commands in ramsey_bot.rb to something you prefer.
+
+![Screenshot](images/screen.png)
 
 
 ## How to Run Tests
