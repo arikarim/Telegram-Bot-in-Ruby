@@ -12,7 +12,7 @@ class Quotes
     @quote_set = @quote_set.sample
   end
 
-  # private
+  private
 
   def make_request
     uri = URI('https://type.fit/api/quotes')

@@ -3,7 +3,7 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
 
-> In this project, I build a Telegram bot that gives a bit of information about me and gives random quotes.
+> In this project, I build a Telegram bot that gives a bit of information about me and gives random quotes and jokes.
 
 ![Screenshot](images/screnn.png)
 
@@ -17,8 +17,8 @@
 - Once you have an account, search for @BotFather, the Telegram bot-making wizard. This should open a chat with the BotFather.
 - Now type '/newbot' and send to start a new bot and follow the instructions. The BotFather will ask you to choose a username and give you an API token. Keep this token secret. It can be used to control your bot.
 - Fork this repo and clone to your local machine.
-- Cd into the repo and create a file in the main directory called 'config.rb'
-- Inside config.rb, type 'TELEGRAM_TOKEN_ID' and set it equal to the API token you got from the BotFather. Make sure the API token is in quotes to make it a string.
+- Cd into the repo and create a file in the main directory called 'token.rb'
+- Inside token.rb, type 'TOKEN' and set it equal to the API token you got from the BotFather. Make sure the API token is in quotes to make it a string.
 
 - Make sure you have Bundler installed in your machine. Once in the project folder (top level director), enter the command `bundle install` in your terminal. This will install the basic dependencies in the Gemfile.
 
@@ -34,14 +34,22 @@
 
 - 'Quote' will prompt the bot to give a random inspirational quote.
 
-- Of course, you can alter the messages and commands in ramsey_bot.rb to something you prefer.
+- 'Joke' will prompt the bot to give a random funny joke.
+
+- Of course, you can alter the messages and commands in bot.rb to something you prefer.
 
 ![Screenshot](images/screen.png)
 
 
+
+##More Information
+
+- for more information you can watch this[video](https://www.loom.com/share/ab8c022495c745588a36e69d64a87b1a)
+
+
 ## How to Run Tests
 
-- If you ran `bundle install`, RSpec should be installed, along with all the other dependencies. To run the tests, cd into the top-level project folder and enter the command `rspec`. This will run all tests. It should be noted that the #make_request method is a private method, so its test will naturally fail. To make it pass, temporarily comment out the `private` keyword in the motivational_quotes.rb file. The tests should now pass. Once satisfied, uncomment it so that the #make_request method is private again.
+- If you ran `bundle install`, RSpec should be installed, along with all the other dependencies. To run the tests, cd into the top-level project folder and enter the command `rspec spec/test.rb`. This will run all tests. It should be noted that the #make_request method is a private method, so its test will naturally fail. To make it pass, temporarily comment out the `private` keyword in the `quotes.rb file`. The tests should now pass. Once satisfied, uncomment it so that the #make_request method is private again.
 
 
 
