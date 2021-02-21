@@ -17,7 +17,7 @@ class Bot
           quote = Quotes.new.random_quote
           bot.api.send_message(chat_id: message.chat.id, text: (quote['text']).to_s, date: message.date)
         when /joke/i
-          bot.api.send_message(chat_id: message.chat.id, text: (JOKE.read_body[82..-4]), date: message.date)
+          bot.api.send_message(chat_id: message.chat.id, text: JOKE.read_body[82..-4], date: message.date)
         else
           bot.api.send_message(chat_id: message.chat.id,
                                text: "Sorry, I don't understand '#{message.text}'. I only understand `Hi` `info` `quote` and `joke`")
