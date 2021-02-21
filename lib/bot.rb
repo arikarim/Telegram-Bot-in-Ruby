@@ -1,6 +1,7 @@
 require 'telegram/bot'
 require_relative '../token'
 require_relative 'quotes'
+require_relative 'jokes'
 class Bot
   def initilize
     Telegram::Bot::Client.run(TOKEN) do |bot|
@@ -15,10 +16,11 @@ class Bot
         when /quote/i
           quote = Quotes.new.random_quote
           bot.api.send_message(chat_id: message.chat.id, text: (quote['text']).to_s, date: message.date)
-          bot.api.send_message(chat_id: message.chat.id, text: 'Random joke')
+        when /joke/i
+          bot.api.send_message(chat_id: message.chat.id, text: (JOKE.read_body[82..-4]), date: message.date)
         else
           bot.api.send_message(chat_id: message.chat.id,
-                               text: "Sorry, I don't understand '#{message.text}'. I only understand `Hi` `info` `quote`")
+                               text: "Sorry, I don't understand '#{message.text}'. I only understand `Hi` `info` `quote` and `joke`")
         end
       end
     end
