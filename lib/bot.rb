@@ -9,10 +9,10 @@ class Bot
         case message.text
         when /hi/i
           bot.api.send_message(chat_id: message.chat.id,
-                               text: "Hello, #{message.from.first_name}, I am Ari's Chatbot! and i speak on behalf of him right now im expermintal and new")
+                               text: "Hello, #{message.from.first_name}, I am Ari's Chatbot! and I speak on behalf of him right now I am experimental and new")
         when /info/i
           bot.api.send_message(chat_id: message.chat.id,
-                               text: 'I am is 22 years old, Ihave bachelor degree in Nursing and after University i desided to join Microverse, Right now i am so happy of studying and learning')
+                               text: 'I am 22 years old, I have bachelor degree in Nursing and after University I desided to join Microverse, Right now I am so happy of studying and learning')
         when /quote/i
           quote = Quotes.new.random_quote
           bot.api.send_message(chat_id: message.chat.id, text: (quote['text']).to_s, date: message.date)
