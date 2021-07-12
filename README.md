@@ -1,7 +1,6 @@
 # TELEGRAM BOT
 
 
-
 [![forthebadge](https://forthebadge.com/images/badges/made-with-ruby.svg)](https://forthebadge.com)
 
 > In this project, I build a Telegram bot that gives a bit of information about me and gives random quotes and jokes.
